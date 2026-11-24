@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boutique Cafe — Chișinău</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EEE8;--hero:linear-gradient(#E9DDD1,#F4EEE8);--card:#FFFBF7;--ink:#2E211A;--mute:#8B7566;--pour:#5B3A29;--line:#D9C8B9;--btn:#5B3A29;--btnink:#FFF8F1;--soft:#EFE4D9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#19120F;--hero:linear-gradient(#2A1E18,#19120F);--card:#241B17;--ink:#F2E8DF;--mute:#B3A094;--pour:#D39A6B;--line:#4A3A31;--btn:#D39A6B;--btnink:#2A1A10;--soft:#2F241E}}
+:root[data-theme="dark"]{--bg:#19120F;--hero:linear-gradient(#2A1E18,#19120F);--card:#241B17;--ink:#F2E8DF;--mute:#B3A094;--pour:#D39A6B;--line:#4A3A31;--btn:#D39A6B;--btnink:#2A1A10;--soft:#2F241E}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Manrope,system-ui,sans-serif}
+[hidden]{display:none!important}
+:root{--doodle:#1A120E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--doodle:#E9DED3}}
+:root[data-theme="dark"]{--doodle:#E9DED3}
+.d{position:absolute;z-index:0;pointer-events:none;color:var(--doodle);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;height:auto}
+.hero>:not(.d){position:relative;z-index:1}
+#mw{position:relative;overflow:hidden}
+@media (max-width:700px){#mw .d{opacity:.4}}
+a{color:inherit}
+.hero{position:relative;overflow:hidden;min-height:92svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:32px 16px;background:var(--hero);text-align:center}
+.hero svg{width:min(100%,820px);height:auto;overflow:visible}
+.logo{font:italic 600 112px "Cormorant Garamond",Georgia,serif}
+.stream{stroke-dasharray:9 7;animation:flow .3s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-16}}
+.intro{opacity:0;animation:in .8s 2.1s forwards;max-width:34ch}
+.intro p{margin:0 0 16px;color:var(--mute)}
+@keyframes in{to{opacity:1}}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--btn);color:var(--btnink);font:600 15px Manrope,sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--pour);outline-offset:3px}
+section{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:56px 18px}
+h2{font:italic 600 44px/1.1 "Cormorant Garamond",Georgia,serif;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{position:relative;z-index:1;background:var(--card);border-radius:26px;padding:24px 22px;box-shadow:0 10px 30px rgba(91,58,41,.08)}
+.card h3{font:italic 600 28px "Cormorant Garamond",Georgia,serif;margin:0 0 12px}
+ul{list-style:none;margin:0;padding:0}
+li.m{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+li.m i{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-4px)}
+li.m small{color:var(--mute);margin-left:4px}
+li.m b{font-weight:600;white-space:nowrap}
+.pair{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.top h2{margin:0}
+.tea{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--card);border-radius:22px;margin-bottom:12px;box-shadow:0 8px 24px rgba(91,58,41,.07)}
+.ic{display:flex;gap:6px;min-width:96px;font-size:30px;line-height:1}
+.tea span.t{font-size:18px;font-weight:500}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tile{background:var(--card);border-radius:22px;padding:20px 10px;text-align:center;box-shadow:0 8px 24px rgba(91,58,41,.07)}
+.tile .e{display:flex;justify-content:center;font-size:42px;line-height:1.2;margin-bottom:6px;height:50px;align-items:center}
+.tile svg,.ic svg{width:1em;height:1em}
+footer{background:var(--soft);padding:48px 18px 56px;text-align:center}
+footer p{margin:6px 0}
+footer .row{margin-top:18px}
+@media (max-width:520px){.logo{font-size:104px}h2{font-size:38px}}
+@media (prefers-reduced-motion:reduce){.intro{animation:none;opacity:1}.stream{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="bean" viewBox="0 0 40 40"><g transform="rotate(35 20 20)"><ellipse cx="20" cy="20" rx="10" ry="16"/><path d="M20 4Q12 14 20 20Q28 26 20 36"/></g></symbol>
+<symbol id="cup" viewBox="0 0 60 60"><path d="M10 24h34v8q0 14-17 14q-17 0-17-14z"/><path d="M44 28h4q6 0 6 6q0 6-6 6h-4"/><path d="M8 51h38"/><path d="M20 18q-4-5 0-9q4-4 0-8M31 18q-4-5 0-9q4-4 0-8"/></symbol>
+<symbol id="moka" viewBox="0 0 60 80"><path d="M14 76L18 50H42L46 76z"/><path d="M19 50L22 22H38L41 50"/><path d="M20 22Q30 10 40 22"/><circle cx="30" cy="10" r="2.5"/><path d="M41 30q14 2 12 18q-1 8-9 8"/><path d="M22 22l-5-3"/></symbol>
+<symbol id="man" viewBox="0 0 100 100"><path d="M30 38Q30 14 50 14Q70 14 70 38"/><path d="M31 33Q50 40 69 33"/><path d="M14 44Q50 28 86 44Q50 54 14 44z"/><path d="M34 46Q34 77 50 79Q66 77 66 46"/><circle cx="42" cy="56" r="1.8"/><circle cx="58" cy="56" r="1.8"/><path d="M50 56q-3 8 1 9"/><path d="M50 67C42 60 34 63 31 70C38 67 44 71 50 68C56 71 62 67 69 70C66 63 58 60 50 67z"/><path d="M44 73Q50 77 56 73"/><path d="M18 98Q22 83 42 81M82 98Q78 83 58 81"/><path d="M50 84l-7-4v8zM50 84l7-4v8z"/></symbol>
+<symbol id="spark" viewBox="0 0 16 16"><path d="M8 1Q8 8 15 8Q8 8 8 15Q8 8 1 8Q8 8 8 1z"/></symbol>
+</defs></svg>
+<main id="home">
+<header class="hero">
+<svg viewBox="0 0 800 230" role="img" aria-label="Boutique Cafe">
+<defs><clipPath id="clip"><rect id="fill" x="0" y="0" width="0" height="230"><animate attributeName="width" from="40" to="800" dur="1.8s" begin="0.3s" fill="freeze"/></rect></clipPath></defs>
+<text class="logo" x="400" y="165" text-anchor="middle" textLength="700" lengthAdjust="spacing" fill="#fff" stroke="rgba(91,58,41,.28)" stroke-width="1.2">Boutique Cafe</text>
+<text class="logo" x="400" y="165" text-anchor="middle" textLength="700" lengthAdjust="spacing" fill="var(--pour)" clip-path="url(#clip)">Boutique Cafe</text>
+<g id="cup" opacity="0" stroke-linecap="round">
+<animateTransform attributeName="transform" type="translate" from="3 50" to="763 50" dur="1.8s" begin="0.3s" fill="freeze"/>
+<set attributeName="opacity" to="1" begin="0.1s"/><set attributeName="opacity" to="0" begin="2.2s"/>
+<path class="stream" d="M37 -2V92" stroke="#6B4630" stroke-width="5" fill="none"/>
+<g transform="rotate(30)"><path d="M-30 -22h60l-8 44h-44z" fill="#fff" stroke="#6B4630" stroke-width="3" stroke-linejoin="round"/><path d="M-30 -12q-18 2-10 18" fill="none" stroke="#6B4630" stroke-width="3"/></g>
+</g>
+</svg>
+<div class="intro"><p>Cafea, ceai și băuturi calde în Chișinău</p>
+<div class="row"><a class="btn" href="#menu">Meniu</a><a class="btn alt" href="tel:+37360377880">Sună</a></div></div>
+</header>
+
+<div id="mw"><section id="menu">
+<h2>Meniu</h2>
+<div class="grid">
+<div class="card"><h3>Cafea</h3><ul id="coffee"></ul></div>
+<div class="card"><h3>Ceai și sirop</h3><ul id="tea-syrup"></ul>
+<div class="pair"><a class="btn" href="#tea">Vezi gusturile de ceai</a><a class="btn alt" href="#syrups">Vezi gusturile de sirop</a></div></div>
+<div class="card"><h3>Cald</h3><ul id="hot"></ul></div>
+<div class="card"><h3>Rece</h3><ul id="cold"></ul></div>
+</div>
+</section></div>
+
+<footer id="contact">
+<h2>Contact</h2>
+<p>mun. Chișinău, str. Negruzzi 2/4</p>
+<p>Zilnic, 8:00–21:00</p>
+<div class="row"><a class="btn" href="tel:+37360377880">+373 60 377 880</a><a class="btn alt" href="https://maps.google.com/?q=Strada+Negruzzi+2,+Chisinau" target="_blank" rel="noopener">Deschide harta</a></div>
+</footer>
+</main>
+
+<section id="tea" hidden>
+<div class="top"><h2>Gusturi de ceai</h2><a class="btn alt" href="#menu">Înapoi la meniu</a></div>
+<div id="tea-list"></div>
+</section>
+
+<section id="syrups" hidden>
+<div class="top"><h2>Gusturi de sirop</h2><a class="btn alt" href="#menu">Înapoi la meniu</a></div>
+<div class="tiles" id="syrup-list"></div>
+</section>
+
+<script>
+var RB='<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3 0 5 2 6 4-3 0-5-1-6-4z" fill="#4C8B3F"/><g fill="#C2185B"><circle cx="11" cy="14" r="4.5"/><circle cx="21" cy="14" r="4.5"/><circle cx="16" cy="13" r="4.5"/><circle cx="12" cy="21" r="4.5"/><circle cx="20" cy="21" r="4.5"/><circle cx="16" cy="26" r="4"/></g></svg>';
+var coffee=[['Espresso','50 ml',21],['Espresso x2','100 ml',29],['Ristretto','20 ml',21],['Macchiato','60 ml',25],['Cortado','120 ml',35],['Americano','180 ml',21],['Americano x2','250 ml',29],['Flat White','250 ml',35],['Cappuccino','250 ml',26],['Cappuccino x2','300 ml',36],['Latte','350 ml',30],['Latte x2','500 ml',40]];
+var hot=[['Cacao','250 ml',26],['Cacao mare','330 ml',34],['Ciocolată caldă','250 ml',35]];
+var cold=[['Fuze Tea rece','500 ml',25],['Coca-Cola','500 ml',30],['Apă Borsec, plată sau gazată','500 ml',25]];
+var teas=[['Ghimbir, lămâie și miere','🫚🍋🍯'],['Zmeură cu mentă și miere',RB+'🌿🍯'],['Portocală, mentă și miere','🍊🌿🍯'],['Ceai verde','🍵'],['Floral cu mere','🌸🍎'],['Ceai negru clasic','☕']];
+var syr=[['Ciocolată','🍫'],['Cocos','🥥'],['Popcorn','🍿'],['Zmeură',RB],['Mentă','🌿'],['Portocală','🍊'],['Lavandă','🪻'],['Caramel dulce','🍬'],['Caramel sărat','🧂'],['Alune de pădure','🌰'],['Tiramisu','🍰']];
+function li(n,v,p){return '<li class="m"><span>'+n+(v?'<small>'+v+'</small>':'')+'</span><i></i><b>'+p+'</b></li>'}
+function fill(id,a){document.getElementById(id).innerHTML=a.map(function(x){return li(x[0],x[1],x[2]+' lei')}).join('')}
+fill('coffee',coffee);fill('hot',hot);fill('cold',cold);
+document.getElementById('tea-syrup').innerHTML=li('Ceai natural','250 ml','30 lei')+li('Sirop','adaos','+5 lei');
+document.getElementById('tea-list').innerHTML=teas.map(function(t){return '<div class="tea"><div class="ic">'+t[1]+'</div><span class="t">'+t[0]+'</span></div>'}).join('');
+document.getElementById('syrup-list').innerHTML=syr.map(function(s){return '<div class="tile"><div class="e">'+s[1]+'</div>'+s[0]+'</div>'}).join('');
+var VB={bean:[40,40],cup:[60,60],moka:[60,80],man:[100,100],spark:[16,16]};
+function put(box,list){list.forEach(function(d){var v=VB[d[0]],w=d[2];box.insertAdjacentHTML('beforeend','<svg class="d" viewBox="0 0 '+v[0]+' '+v[1]+'" style="'+d[1]+';width:clamp('+Math.round(w*.6)+'px,'+(w/9).toFixed(1)+'vw,'+w+'px);transform:'+(d[3]||'none')+'" aria-hidden="true"><use href="#'+d[0]+'"/></svg>')})}
+put(document.querySelector('.hero'),[['man','top:4%;left:3%',150,'rotate(-5deg)'],['moka','top:5%;right:4%',90,'rotate(6deg)'],['bean','top:6%;left:34%',34,'rotate(25deg)'],['bean','top:16%;right:30%',26,'rotate(-40deg)'],['spark','top:10%;left:55%',24],['spark','top:24%;left:6%',18],['cup','bottom:5%;left:4%',100,'rotate(-6deg)'],['man','bottom:4%;right:3%',130,'scaleX(-1) rotate(4deg)'],['bean','bottom:6%;left:34%',30,'rotate(-20deg)'],['bean','bottom:18%;right:26%',36,'rotate(50deg)'],['bean','bottom:20%;left:20%',24,'rotate(10deg)'],['spark','bottom:10%;right:30%',22]]);
+put(document.getElementById('mw'),[['bean','top:6%;left:1.5%',30,'rotate(15deg)'],['cup','top:14%;right:1%',50,'rotate(8deg)'],['spark','top:30%;left:2%',22],['moka','top:42%;right:.5%',44,'rotate(-6deg)'],['bean','top:52%;left:.5%',28,'rotate(-30deg)'],['man','top:66%;left:.5%',58,'rotate(-6deg)'],['bean','top:74%;right:2%',28,'rotate(40deg)'],['spark','top:86%;right:3%',20],['cup','top:90%;left:2%',46,'rotate(-8deg)']]);
+function route(){
+  var h=location.hash.slice(1),v=(h==='tea'||h==='syrups')?h:'home';
+  ['home','tea','syrups'].forEach(function(id){document.getElementById(id).hidden=(id!==v)});
+  if(v!=='home'){window.scrollTo(0,0)}
+  else if(h){var el=document.getElementById(h);if(el)el.scrollIntoView()}
+}
+window.addEventListener('hashchange',route);route();
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.getElementById('fill').setAttribute('width','800');document.getElementById('cup').remove();
+}
+</script>
+</body>
+</html>
